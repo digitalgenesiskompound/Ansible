@@ -1,6 +1,9 @@
 ---
 - name: Update and upgrade apt packages
   hosts: all
+  remote_user: ngk       # Explicitly specify the remote user
+  become: yes            # Enable privilege escalation if necessary
+  become_method: sudo    # Specify the method for privilege escalation
 
   tasks:
     - name: Update packages with apt
