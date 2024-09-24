@@ -1,7 +1,6 @@
 ---
 - name: Update and upgrade apt packages
   hosts: all
-  remote_user: ngk  # Add this line
 
   tasks:
     - name: Update packages with apt
